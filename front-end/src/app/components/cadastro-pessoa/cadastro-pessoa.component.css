@@ -1,0 +1,21 @@
+mat-form-field{
+  margin-bottom: -1.25em;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 33%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.cadastro-telefone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
