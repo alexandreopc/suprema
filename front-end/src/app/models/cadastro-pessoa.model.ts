@@ -1,4 +1,5 @@
 export class CadastroPessoaModel {
+  id?: string = '';
   nome: string = '';
   cpf: string = '';
   rg: string = '';
@@ -8,4 +9,10 @@ export class CadastroPessoaModel {
   setor: string = '';
   cidade: string = '';
   uf: string = '';
+  telefones: Telefones[] = [];
+}
+
+interface Telefones {
+  numero: string;
+  descricao: string;
 }

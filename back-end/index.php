@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     for($i = 0; $i<count($array); $i++){
       $pdo->query("INSERT INTO telefones (\"pessoaId\", numero, descricao) VALUES ('{$index}', '{$arrayNumeros[$i]}', '{$arrayDescricao[$i]}');");
     }
-    echo "pessoa inserida com sucesso!";
+    http_response_code(201);
   }
 }
 
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
       $pdo->query("INSERT INTO telefones (\"pessoaId\", numero, descricao) VALUES ('{$_GET['pessoa-id']}', '{$arrayNumeros[$i]}', '{$arrayDescricao[$i]}');");
     }
 
-    echo "dados atualizados!";
+    http_response_code(200);
   }
 }
 
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     $pdo->query("DELETE FROM telefones WHERE \"pessoaId\" = {$_GET['pessoa-id']};");
     $pdo->query("DELETE FROM pessoa WHERE id = {$_GET['pessoa-id']};");
   
-    echo "pessoa excluída do sistema!";
+    http_response_code(200);
   }
 }
 

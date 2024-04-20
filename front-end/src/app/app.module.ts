@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     MatTableModule,
     MatTooltipModule,
     MatInputModule,
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync()

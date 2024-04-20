@@ -51,24 +51,24 @@
           </div>
 
           <div class="cadastro-telefone">
-            <div>
+            <div *ngFor="let telefone of pessoa.telefones; let i = index" class="telefone-form">
               <mat-form-field appearance="outline">
                 <mat-label>Telefone</mat-label>
-                <input required type="text" matInput placeholder="Telefone" name="numero" mask="000.000.000-00" [(ngModel)]="pessoa.cpf"/>
+                <input required type="text" matInput placeholder="Telefone" name="numero" [(ngModel)]="telefone.numero"/>
               </mat-form-field>
               <mat-form-field appearance="outline">
                 <mat-label>Descrição telefone</mat-label>
-                <input required type="text" matInput placeholder="Descrição telefone" name="descricao" [(ngModel)]="pessoa.rg"/>
+                <input required type="text" matInput placeholder="Descrição telefone" name="descricao" [(ngModel)]="telefone.descricao"/>
               </mat-form-field>
             </div>
+            <button mat-button color="primary" (click)="addTelefone()"><mat-icon>control_point</mat-icon></button>
 
             <div class="actions">
               <button type="submit" mat-flat-button color="primary" (click)="sendForm()" style="margin-right: 24px;">Gravar</button>
-              <button type="submit" mat-flat-button color="primary" (click)="sendForm()">Excluir</button>
+              <button type="submit" mat-flat-button color="primary" (click)="excluir()">Excluir</button>
             </div>
           </div>
         </div>
-
       </mat-card-content>
     </mat-card>
   </div>

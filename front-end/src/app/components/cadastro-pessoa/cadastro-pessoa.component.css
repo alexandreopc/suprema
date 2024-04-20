@@ -17,5 +17,10 @@ mat-form-field{
 .cadastro-telefone {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
+
+.actions {
+  margin-top: 220px;
+  display: flex;
+}
+
