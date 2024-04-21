@@ -35,7 +35,7 @@ Foi utilizado o XAMPP para rodar o servidor localmente no windows, se for o caso
       <Directory "D:\Projetos\suprema\back-end">
 Assim, tornadno possivel acessar o back-end pelo endereco 'localhost/'
 
-Para rodar o front-end, são necessários dois comandos:
+Para rodar o front-end, são necessários dois comandos (devem ser executados dentro da pasta /front-end/):
 -> npm i (instala modulos e dependecias do projeto)
 -> npm start (inicia o projeto)
 
