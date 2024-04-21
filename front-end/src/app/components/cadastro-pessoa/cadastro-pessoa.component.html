@@ -41,10 +41,10 @@
               <input required type="text" matInput placeholder="Cidade" name="cidade" [(ngModel)]="pessoa.cidade"/>
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="uf">
               <mat-label>UF</mat-label>
               <select matNativeControl required name="uf" [(ngModel)]="pessoa.uf">
-                <option value="">Selecione um estado</option>
+                <option value="">Select</option>
                 <option *ngFor="let estado of siglasEstadosBrasileiros" [value]="estado">{{ estado }}</option>
               </select>
             </mat-form-field>
